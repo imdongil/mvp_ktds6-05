@@ -25,6 +25,7 @@ MS AI 개발역량 향상과정 MVP 제출
 17. https://ktds6-05-webapp-0929-dmdqcrfzbfbhf4cm.koreacentral-01.azurewebsites.net/
     
 </br>
+<div>
 참고사항</br>
 1. Storage account 이용</br>
 	BLOB 스토리지 생성</br>
@@ -66,3 +67,4 @@ MS AI 개발역량 향상과정 MVP 제출
 
 6.Create Computer Vision</br>
 	name : ktds6-05-computervision-093001</br>
+</div>	
