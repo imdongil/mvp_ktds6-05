@@ -1,9 +1,0 @@
-streamlit
-python-dotenv
-langchain-core
-langchain-community
-langchain_openai
-#faiss-cpu
-azure-core
-azure-search-documents
-openai
