@@ -1,10 +1,10 @@
 # mvp_ktds6-05
 MS AI 개발역량 향상과정 MVP 제출
 
-##프로젝트 : 간편한 셀프 해결
+## 프로젝트 : 간편한 셀프 해결
 내용 : kt 상품 가입 고객이 문제가 생겼을때 간편 해결 방법을 안내 하고 연관 상품을 안내하는 AI을 개발해 보고자 합니다.
 
-##플로우
+## 플로우
 1. 고객이 해결 하고자 하는 정보 대해서 질의 : 텍스트 또는 상품 캡춰 사진 업로드로 판단
 2. 텍스트 또는 사진 기반으로 고객의 상품이나 해결 해야 하는 부분 탐지
 3. 현재는Computer Vision을 통한 태그 및 캡션 인식까지만 구현함
@@ -22,9 +22,10 @@ MS AI 개발역량 향상과정 MVP 제출
 15. Azure Web App생성하여 퍼블리싱
 16. 최종 업로드 사이트 링크
 17. https://ktds6-05-webapp-0929-dmdqcrfzbfbhf4cm.koreacentral-01.azurewebsites.net/
-</br>
+
+## 참고사항
 <PRE font-style="9pt">
-참고사항
+
 1. Storage account 이용
 	BLOB 스토리지 생성
 	Create a storage account
