@@ -25,7 +25,7 @@ MS AI 개발역량 향상과정 MVP 제출
 17. https://ktds6-05-webapp-0929-dmdqcrfzbfbhf4cm.koreacentral-01.azurewebsites.net/
     
 </br>
-<div>
+<P>
 참고사항</br>
 1. Storage account 이용</br>
 	BLOB 스토리지 생성</br>
@@ -40,16 +40,16 @@ MS AI 개발역량 향상과정 MVP 제출
 	URL : </br>
 		https://ktds605storage0929.blob.core.windows.net/pdf/KT_MAR4510C.pdf</br>
 		https://ktds605storage0929.blob.core.windows.net/json/kttv.json</br>
-
+</br>
 2. Azure OpenAI 이용</br>
 	Create a new Azure OpenAI service</br>
 		Name : ktds6-05-openai-0929</br>
-
+</br>
 3. embedding model 생성</br>
 	No deployments available with an embedding model.</br>
 	배포 이름: dev-gpt-4.1-mini</br>
 	배포 이름: dev-text-embedding-3-large</br>
-	
+</br>	
 4. RAG : Azure AI Search 이용</br>
 	Create a search service</br>
 		Service name : ktds6-05-aisearch-0929</br>
@@ -58,13 +58,16 @@ MS AI 개발역량 향상과정 MVP 제출
 	import(New)</br>
 		Model deployment : dev-text-embedding-3-large</br>	
 	Data source name : ktds6-05-pdfdata-0929</br>
-	
+</br>	
 5.Create Web App</br>
 	Name : ktds6-05-webapp-0929</br>
 	Linux Plan (Korea Central) : ktds6-05-plan-0929</br>
-	URL : 
+	URL : </br>
 	https://ktds6-05-webapp-0929-dmdqcrfzbfbhf4cm.koreacentral-01.azurewebsites.net/</br>
-
+</br>
+6.Create Computer Vision</br>
+	name : ktds6-05-computervision-093001</br>
+</P>
 6.Create Computer Vision</br>
 	name : ktds6-05-computervision-093001</br>
 </div>	
