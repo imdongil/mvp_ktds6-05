@@ -90,6 +90,9 @@ GROUNDED_PROMPT = """
     Do not generate answers that don't use the sources below.
     Query: {query}
     Sources:\n{sources}
+    
+    **출처**
+    - (page source and page number) 
 """
 
 # prompt = ChatPromptTemplate.from_template(
