@@ -68,6 +68,3 @@ MS AI 개발역량 향상과정 MVP 제출
 6.Create Computer Vision</br>
 	name : ktds6-05-computervision-093001</br>
 </P>
-6.Create Computer Vision</br>
-	name : ktds6-05-computervision-093001</br>
-</div>	
