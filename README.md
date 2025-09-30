@@ -26,6 +26,7 @@ MS AI 개발역량 향상과정 MVP 제출
 </br>
 <PRE>
 참고사항
+<label>	
 1. Storage account 이용
 	BLOB 스토리지 생성
 	Create a storage account
@@ -36,9 +37,10 @@ MS AI 개발역량 향상과정 MVP 제출
 		Upload blob : KT_KI1100.pdf, kttv.json
 	Blob anonymous access
 		Change access level : Change the access level of container 'pdf'. => container
-	URL : </br>
+	URL :
 		https://ktds605storage0929.blob.core.windows.net/pdf/KT_MAR4510C.pdf
 		https://ktds605storage0929.blob.core.windows.net/json/kttv.json
+</label>
 2. Azure OpenAI 이용
 	Create a new Azure OpenAI service
 		Name : ktds6-05-openai-0929
