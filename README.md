@@ -24,9 +24,8 @@ MS AI 개발역량 향상과정 MVP 제출
 16. 최종 업로드 사이트 링크
 17. https://ktds6-05-webapp-0929-dmdqcrfzbfbhf4cm.koreacentral-01.azurewebsites.net/
 </br>
-<PRE>
+<PRE font-style="9pt">
 참고사항
-<label>	
 1. Storage account 이용
 	BLOB 스토리지 생성
 	Create a storage account
@@ -40,7 +39,6 @@ MS AI 개발역량 향상과정 MVP 제출
 	URL :
 		https://ktds605storage0929.blob.core.windows.net/pdf/KT_MAR4510C.pdf
 		https://ktds605storage0929.blob.core.windows.net/json/kttv.json
-</label>
 2. Azure OpenAI 이용
 	Create a new Azure OpenAI service
 		Name : ktds6-05-openai-0929
