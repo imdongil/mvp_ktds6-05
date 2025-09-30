@@ -23,48 +23,41 @@ MS AI 개발역량 향상과정 MVP 제출
 15. Azure Web App생성하여 퍼블리싱
 16. 최종 업로드 사이트 링크
 17. https://ktds6-05-webapp-0929-dmdqcrfzbfbhf4cm.koreacentral-01.azurewebsites.net/
-    
 </br>
 <PRE>
-참고사항</br>
-1. Storage account 이용</br>
-	BLOB 스토리지 생성</br>
-	Create a storage account</br>
-		Storage account name : ktds605storage0929</br>
-		Preferred storage type : Blob Storage</br>
-		Redundancy : LRS</br>
-		New container : pdf, json</br>
-		Upload blob : KT_KI1100.pdf, kttv.json</br>
-	Blob anonymous access</br>
-		Change access level : Change the access level of container 'pdf'. => container</br>
+참고사항
+1. Storage account 이용
+	BLOB 스토리지 생성
+	Create a storage account
+		Storage account name : ktds605storage0929
+		Preferred storage type : Blob Storage
+		Redundancy : LRS
+		New container : pdf, json
+		Upload blob : KT_KI1100.pdf, kttv.json
+	Blob anonymous access
+		Change access level : Change the access level of container 'pdf'. => container
 	URL : </br>
-		https://ktds605storage0929.blob.core.windows.net/pdf/KT_MAR4510C.pdf</br>
-		https://ktds605storage0929.blob.core.windows.net/json/kttv.json</br>
-</br>
-2. Azure OpenAI 이용</br>
-	Create a new Azure OpenAI service</br>
-		Name : ktds6-05-openai-0929</br>
-</br>
-3. embedding model 생성</br>
-	No deployments available with an embedding model.</br>
-	배포 이름: dev-gpt-4.1-mini</br>
-	배포 이름: dev-text-embedding-3-large</br>
-</br>	
-4. RAG : Azure AI Search 이용</br>
-	Create a search service</br>
-		Service name : ktds6-05-aisearch-0929</br>
-		Select Pricing Tier : Basic</br>
-		Parsing mode : Default</br>	
-	import(New)</br>
-		Model deployment : dev-text-embedding-3-large</br>	
-	Data source name : ktds6-05-pdfdata-0929</br>
-</br>	
-5.Create Web App</br>
-	Name : ktds6-05-webapp-0929</br>
-	Linux Plan (Korea Central) : ktds6-05-plan-0929</br>
-	URL : </br>
-	https://ktds6-05-webapp-0929-dmdqcrfzbfbhf4cm.koreacentral-01.azurewebsites.net/</br>
-</br>
-6.Create Computer Vision</br>
-	name : ktds6-05-computervision-093001</br>
+		https://ktds605storage0929.blob.core.windows.net/pdf/KT_MAR4510C.pdf
+		https://ktds605storage0929.blob.core.windows.net/json/kttv.json
+2. Azure OpenAI 이용
+	Create a new Azure OpenAI service
+		Name : ktds6-05-openai-0929
+3. embedding model 생성
+	No deployments available with an embedding model.
+	배포 이름: dev-gpt-4.1-mini
+	배포 이름: dev-text-embedding-3-large
+4. RAG : Azure AI Search 이용
+	Create a search service
+		Service name : ktds6-05-aisearch-0929
+		Select Pricing Tier : Basic
+		Parsing mode : Default
+	import(New)
+		Model deployment : dev-text-embedding-3-large
+	Data source name : ktds6-05-pdfdata-0929
+5.Create Web App
+	Name : ktds6-05-webapp-0929
+	Linux Plan (Korea Central) : ktds6-05-plan-0929
+	URL : https://ktds6-05-webapp-0929-dmdqcrfzbfbhf4cm.koreacentral-01.azurewebsites.net/
+6.Create Computer Vision
+	name : ktds6-05-computervision-093001
 </PRE>
