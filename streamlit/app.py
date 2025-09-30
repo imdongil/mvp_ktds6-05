@@ -2,7 +2,8 @@ import os
 from dotenv import load_dotenv
 
 # from langchain_openai import AzureChatOpenAI, AzureOpenAIEmbeddings
-# from langchain.prompts import ChatPromptTemplate
+from langchain.prompts import ChatPromptTemplate
+
 # from langchain.chains import create_retrieval_chain
 # from langchain.chains.combine_documents import create_stuff_documents_chain
 import streamlit as st
@@ -82,28 +83,31 @@ except Exception as e:
     sys.exit(1)
 
 # This prompt provides instructions to the model
-GROUNDED_PROMPT = """
-    You are a friendly assistant that recommends hotels based on activities and amenities.
+ground_prompt = """
+    You are a friendly assistant.
     Answer the query using only the sources provided below in a friendly and concise bulleted manner.
     Answer ONLY with the facts listed in the list of sources below.
     If there isn't enough information below, say you don't know.
     Do not generate answers that don't use the sources below.
     Query: {query}
-    Sources:\n{sources}
+    Sources: {sources}
     
     **출처**
     - (page source and page number) 
 """
 
-# prompt = ChatPromptTemplate.from_template(
+# chat_prompt = ChatPromptTemplate.from_template(
 #     """
 #     Context 안에 있는 정보를 바탕으로 질문에 답해줘.
 
 #     <context>
-#     {context}
+#     {query}
 #     </context>
 
-#     질문 : {input}
+#     질문 : {sources}
+
+#     **출처**
+#     - (page source and page number)
 #     """
 # )
 
@@ -111,7 +115,7 @@ GROUNDED_PROMPT = """
 # Search results are composed of the top 5 results and the fields selected from the search index.
 try:
     search_result = search_client.search(
-        search_text=GROUNDED_PROMPT, top=5, select="title, chunk"
+        search_text=ground_prompt, top=5, select="title, chunk"
     )
 
     search_results_list = list(search_result)
@@ -127,14 +131,14 @@ sources_formatted = "\n".join(
 
 
 # 함수 정의
-def create_rag(query):
+def create_rag_retreve(query):
     # print("==Search Results =")
     # print(sources_formatted)
     # Send the search results and the query to the LLM to generate a response based on the prompt.
     messages = [
         {
             "role": "user",
-            "content": GROUNDED_PROMPT.format(query=query, sources=sources_formatted),
+            "content": ground_prompt.format(query=query, sources=sources_formatted),
         }
     ]
 
@@ -210,7 +214,7 @@ if uploaded_file is not None:
         print(f"   '{result.caption.text}', Confidence {result.caption.confidence:.2f}")
         st.write("Caption: " + result.caption.text)
 
-    # 태그 출력
+    # 태그 출력하는 부분
     if result.tags is not None:
         print(" Tags:")
         tags = ""
@@ -219,6 +223,7 @@ if uploaded_file is not None:
             tags += tag.name + ", "
         st.write("Tags: " + tags)
 
+# 채팅 처리 부분
 for msg in st.session_state["messages"]:
     with st.chat_message(msg["role"]):
         st.markdown(msg["content"])
@@ -232,30 +237,23 @@ if prompt := st.chat_input("User: "):
     with st.chat_message("assistant"):
         placeholder = st.empty()
 
-        # for chunk in llm.stream(st.session_state["messages"]):
-        #     response_text += chunk.content
-        #     placeholder.markdown(response_text)
-
-        # for message in st.session_state.messages:
-        #     with st.chat_message(message["role"]):
-        #         query = message["content"]
         # content 필드만 추출
         contents = [message["content"] for message in st.session_state.messages]
         # 출력
         # for idx, content in enumerate(contents, start=1):
         #     print(f"Message {idx}: {content}")
         # print()
-        query = contents[-1]
+        last_question = contents[-1]
         # print(query)
 
         # result = retrival_chain.invoke({"input": query})
         # response_text += result["answer"]
-        result = create_rag(query)
+        result = create_rag_retreve(last_question)
         response_text += result
         placeholder.markdown(response_text)
     st.session_state["messages"].append({"role": "assistant", "content": response_text})
 
-# Define a list of options
+# 셋탑 선택 상자 : 기본은 채팅에서 선택되겠으나 테스트를 위해서 별도 표기
 options = ["KT_KI1100", "KT_MAR4510C"]
 with st.sidebar:
     st.write(kt_qna_title)
