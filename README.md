@@ -20,7 +20,7 @@ MS AI 개발역량 향상과정 MVP 제출
 ### 웹사이트에 업로드
    streamlit 기반으로 웹환경 개발
    Azure Web App생성하여 퍼블리싱
-   최종 업로드 사이트 링크
+   <div>최종 업로드 사이트 링크</div>
    <A href="https://ktds6-05-webapp-0929-dmdqcrfzbfbhf4cm.koreacentral-01.azurewebsites.net/" target="_blank">ktds6-05-webapp-0929-dmdqcrfzbfbhf4cm.koreacentral-01.azurewebsites.net</A>
 
 ## 참고사항
