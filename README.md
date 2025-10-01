@@ -16,17 +16,22 @@ MS AI 개발역량 향상과정 MVP 제출
    Azure AI Search 이용 업로든 된 정보를 인덱싱
    현재 구현은 json 파일을 BLOB에 업로드 하여 벡터 기반으로 인덱스 생성하여 안내 하도록 함
 </PRE>	
-### 학습된 내용 기반으로 안내를 하는데 안내 템플릿을 사전 정의 : 정의 내용에 연관 상품 추천 포함</div>
-   <div>ChatPromptTemplate을 이용하여 템플릿 형태로 안내하도로 개발</div>
-   <div>연관 상품 추천하는 부분은 고민중</div>
+### 학습된 내용 기반으로 안내를 하는데 안내 템플릿을 사전 정의 : 정의 내용에 연관 상품 추천 포함
+<PRE>
+   ChatPromptTemplate을 이용하여 템플릿 형태로 안내하도로 개발
+   연관 상품 추천하는 부분은 고민중
+</PRE>
 ### 템플릿 기반으로 LLM 안내
-    <div>AzureChatOpenAI 기반으로 gpt-4.1-mini 모델기반으로 개발</div>
+<PRE>
+    AzureChatOpenAI 기반으로 gpt-4.1-mini 모델기반으로 개발
+</PRE>	
 ### 웹사이트에 업로드
-   <div>streamlit 기반으로 웹환경 개발</div>
-   <div>Azure Web App생성하여 퍼블리싱</div>
-   <div>최종 업로드 사이트 링크</div>
+<PRE>
+   streamlit 기반으로 웹환경 개발
+   Azure Web App생성하여 퍼블리싱
+   최종 업로드 사이트 링크
    <A href="https://ktds6-05-webapp-0929-dmdqcrfzbfbhf4cm.koreacentral-01.azurewebsites.net/" target="_blank">ktds6-05-webapp-0929-dmdqcrfzbfbhf4cm.koreacentral-01.azurewebsites.net</A>
-
+</PRE>
 ## 참고사항
 <PRE font-style="9pt">
 1. Storage account 이용
