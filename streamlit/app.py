@@ -158,7 +158,14 @@ def create_rag_retreve(query):
 
 ##프로젝트 타이틀 정의
 kt_qna_title = "KT TV 상담"
+st.set_page_config(page_title=kt_qna_title)
 st.title(kt_qna_title)
+
+st.page_link(
+    "https://help.kt.com/servicetip/ServiceTipInfo.do",
+    label="(참고)kt 간편한 셀프 해결 페이지 링크",
+    icon="🌎",
+)
 
 if "messages" not in st.session_state:
     st.session_state["messages"] = [
